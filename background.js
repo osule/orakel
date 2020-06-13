@@ -127,7 +127,7 @@ function onInstalled(state) {
   function fn() {
     state.init();
     state.persist();
-    chrome.browserAction.setBadgeText({ text: 'ON' });
+    chrome.browserAction.setBadgeText({ text: state.repr() });
   }
   return fn;
 }
