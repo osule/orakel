@@ -1,0 +1,19 @@
+{
+  "name": "Orakel",
+  "version": "1.0",
+  "description": "See publications on Medium!",
+  "manifest_version": 2,
+  "permissions": [
+    "webRequest",
+    "https://*/*",
+    "cookies",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_title": "Orakel"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}
