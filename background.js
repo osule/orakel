@@ -100,10 +100,8 @@ function onBeforeRequest(state, session) {
     if (!state.isActive()) {
       return;
     }
-    // We only care for the domain here so we're using the initiator
-    // instead of detail url.
-    captureSession(session, details.initiator);
-    removeCookies(details.initiator);
+    captureSession(session, details.url);
+    removeCookies(details.url);
   }
   return fn;
 }
